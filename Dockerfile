@@ -21,12 +21,16 @@ ENV INFLUXDB_NAME **ChangeMe**
 ENV INFLUXDB_USER root
 ENV INFLUXDB_PASS root
 
+ENV GRAPHITE_HOST **LinkMe**
+ENV GRAPHITE_PORT **LinkMe**
+
 ENV ELASTICSEARCH_HOST **LinkMe**
 ENV ELASTICSEARCH_PORT **LinkMe**
 
 ADD run.sh /run.sh
 ADD set_influx_db.sh /set_influx_db.sh
 ADD set_basic_auth.sh /set_basic_auth.sh
+ADD set_graphite.sh /set_graphite.sh
 ADD set_elasticsearch.sh /set_elasticsearch.sh
 RUN chmod +x /*.sh
 

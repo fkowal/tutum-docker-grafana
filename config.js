@@ -3,12 +3,10 @@ function (Settings) {
   return new Settings({
     //elasticsearch: "http://"+window.location.hostname+":9200",
     datasources: {
-      influx: {
+      graphite: {
         default: true,
-        type: 'influxdb',
-        url: "http://<--ADDR->:<--PORT-->/db/<--DB_NAME-->",
-        username: "<--USER-->",
-        password: "<--PASS-->",
+        type: 'graphite',
+        url: 'http://${GRAPHITE_HOST}:${GRAPHITE_PORT}'
       }
     },
     default_route: '/dashboard/file/default.json',

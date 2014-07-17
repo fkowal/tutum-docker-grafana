@@ -31,8 +31,12 @@ if [ ! -f /.basic_auth_configured ]; then
     /set_basic_auth.sh
 fi
 
-if [ ! -f /.influx_db_configured ]; then
-    /set_influx_db.sh
+# if [ ! -f /.influx_db_configured ]; then
+#     /set_influx_db.sh
+# fi
+
+if [ ! -f /.graphite_configured ]; then
+    /set_graphite.sh
 fi
 
 if [ ! -f /.elasticsearch_configured ]; then
